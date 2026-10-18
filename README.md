@@ -16,13 +16,41 @@ Agents run in parallel when supported, or sequentially in isolated sessions. Wit
 
 ## Installation
 
-Clone this repository into your agent's skills directory, replacing `/path/to/skills` with the directory your agent uses:
+Choose your client below. These commands use the [Skills CLI](https://github.com/vercel-labs/skills) and require Node.js with `npx`. The `-g` flag installs the skill for your user across projects; omit it to install in the current project instead.
+
+### Claude Code
 
 ```bash
-git clone https://github.com/h4ni0/pr-review.git /path/to/skills/pr-review
+npx skills add h4ni0/pr-review --agent claude-code -g
 ```
 
-Keep `SKILL.md` and `references/` together. Follow your agent's instructions for discovering or reloading skills. This is a Markdown skill, not a standalone CLI or GitHub Action.
+### Codex
+
+```bash
+npx skills add h4ni0/pr-review --agent codex -g
+```
+
+### OpenCode
+
+```bash
+npx skills add h4ni0/pr-review --agent opencode -g
+```
+
+### Cursor
+
+```bash
+npx skills add h4ni0/pr-review --agent cursor -g
+```
+
+### Other clients
+
+Run the interactive installer and select your client:
+
+```bash
+npx skills add h4ni0/pr-review -g
+```
+
+Follow your client's instructions for discovering or reloading skills. Installation alone does not enable independent agents; your client and configuration must support them. This is a Markdown skill, not a standalone CLI or GitHub Action.
 
 ## Usage
 
